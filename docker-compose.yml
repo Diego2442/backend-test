@@ -16,4 +16,3 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       DB_HOST: ${DB_HOST}
       DB_PORT: ${DB_PORT}
-      SECRET_KEY: ${SECRET_KEY}
