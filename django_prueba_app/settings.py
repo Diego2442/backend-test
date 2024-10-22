@@ -55,7 +55,7 @@ MIDDLEWARE_BASE = [
 ]
 
 MIDDLEWARE_THIRDS = [
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
 
