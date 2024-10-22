@@ -56,7 +56,14 @@ MIDDLEWARE_BASE = [
 
 MIDDLEWARE_THIRDS = [
     'whitenoise.middleware.WhiteNoiseMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+""" CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Agrega la URL de tu frontend
+    "https://tu-dominio.com",  # Agrega otros dominios si es necesario
+] """
+CORS_ALLOWED_ORIGINS = ['*']
 
 MIDDLEWARE = MIDDLEWARE_BASE + MIDDLEWARE_THIRDS
 
