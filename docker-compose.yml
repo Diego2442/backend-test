@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    container_name: backend-form
+    command: gunicorn django_prueba_app.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      # Variables de entorno desde .env
+      DB_NAME: ${DB_NAME}        
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      SECRET_KEY: ${SECRET_KEY}
